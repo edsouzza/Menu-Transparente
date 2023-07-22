@@ -16,6 +16,7 @@ li{
 }
 html{
     height: 500vh;
+    background-color: rgb(161, 63, 63);
 }
 .container{
     max-width: 1280px;
@@ -32,6 +33,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    transition: .5s;
 }
 header i{
     font-size: 30px;
@@ -42,11 +44,22 @@ header ul{
 }
 header ul li{
     display: inline-block;
-    margin: 0 40px;
+    margin: 0 40px;    
 }
 header ul li a{
     color: #FFF;
 }
+header ul li a:hover{
+    color:var(--base-color);    
+}
+header.rolagem{
+    background-color: rgba(0, 0, 0, 0.4);   
+    padding: 20px 4%;   
+}
+header.rolagem a, header.rolagem i{
+    color: var(--base-color); /*controla a cor do link do menu com a rolagem*/
+}
+
 /*HOME*/
 .home{
     height: 100vh;
@@ -70,6 +83,7 @@ header ul li a{
 }
 .btn{
     padding: 10px 40px;
+    border: 1px solid rgb(9, 139, 190);
 }
 /* HOME ANIMATION */
 @keyframes mudarbg{
